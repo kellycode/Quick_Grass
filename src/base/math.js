@@ -42,7 +42,7 @@
 // })();
 
 
-import MersenneTwister from 'mersenne-twister';
+import MersenneTwister from './mersenne-twister.js';
 
 
 let RNG_ = new MersenneTwister();

@@ -1,6 +1,6 @@
 import { THREE, RenderPass, ShaderPass, FXAAShader, ACESFilmicToneMappingShader } from './three-defs.js';
 
-import Stats from 'three/examples/jsm/libs/stats.module.js';
+import Stats from 'three/addons/libs/stats.module.js';
 
 import * as entity from "./entity.js";
 import * as light_component from './render/light-component.js';

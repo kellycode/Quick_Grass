@@ -5,7 +5,7 @@ import * as shaders from '../../game/render/shaders.js';
 import * as entity from "../entity.js";
 
 import * as terrain_component from './terrain-component.js';
-import MersenneTwister from 'mersenne-twister';
+import MersenneTwister from '../mersenne-twister.js';
 
 
 
@@ -78,7 +78,7 @@ export class WindComponent extends entity.Component {
     this.#geometry_ = this.#CreateGeometry_();
 
     const textureLoader = new THREE.TextureLoader();
-    const albedo = textureLoader.load('./textures/' + 'dust.png');
+    const albedo = textureLoader.load('./public/textures/' + 'dust.png');
     albedo.colorSpace = THREE.SRGBColorSpace;
 
     this.#material_ = new shaders.ShaderMaterial('WIND', {

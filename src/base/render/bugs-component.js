@@ -5,7 +5,7 @@ import * as shaders from '../../game/render/shaders.js';
 import * as entity from "../entity.js";
 
 import * as terrain_component from './terrain-component.js';
-import MersenneTwister from 'mersenne-twister';
+import MersenneTwister from '../mersenne-twister.js';
 
 
 class InstancedFloat16BufferAttribute extends THREE.InstancedBufferAttribute {
@@ -91,7 +91,7 @@ export class BugsComponent extends entity.Component {
     this.#geometry_ = this.#CreateGeometry_();
 
     const textureLoader = new THREE.TextureLoader();
-    const albedo = textureLoader.load('./textures/' + 'moth.png');
+    const albedo = textureLoader.load('./public/textures/' + 'moth.png');
     albedo.colorSpace = THREE.SRGBColorSpace;
 
     // // this.#grassMaterialLow_.setVec4('grassDraw', new THREE.Vector4(
